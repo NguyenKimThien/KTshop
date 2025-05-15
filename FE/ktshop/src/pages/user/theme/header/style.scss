@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+DK+Loopet:wght@100..400&display=swap');
+.header_top{
+    background-color: #DDDDDD;
+    height: 40px;
+    .header_top-main{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-size: 14px;
+        .header_top-left{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+        .header_top-left>*{
+            margin-right: 10px;
+        }
+        .header_top-right{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+    
+            .account{
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                margin-left: 25px;
+                a{
+                    color: #000;
+                    margin-left: 5px;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .header_top-right>*{
+            margin-left: 10px;
+        }
+    }
+}
