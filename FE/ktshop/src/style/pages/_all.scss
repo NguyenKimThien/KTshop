@@ -1,16 +1,19 @@
 @use "sass:map";
 @import "theme";
+@import "responsive";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Playpen+Sans+Arabic:wght@100..800&family=Playwrite+DK+Loopet:wght@100..400&display=swap');
 
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
+
 * {
   margin: 0;
   padding: 0;
-  font: inherit;
 }
+
 img,
 picture,
 svg,
@@ -18,18 +21,21 @@ video {
   display: block;
   max-width: 100%;
 }
+
 input,
 select,
 textarea {
   background-color: transparent;
   outline: none;
 }
+
 button {
   cursor: pointer;
   background-color: transparent;
   outline: none;
   border: 0;
 }
+
 body {
   min-height: 100vh;
   font-weight: 400;
@@ -39,5 +45,44 @@ body {
 
 .container {
   max-width: 1100px;
-  margin:auto;
+  margin: auto;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.col-lg-6{
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.col-lg-3{
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+
+@include Responsive($MEDIUM_DEVICE) {
+  .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@include Responsive($DESTOP) {
+  .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .col-xl-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
 }

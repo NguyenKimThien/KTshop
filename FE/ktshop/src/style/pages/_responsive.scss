@@ -1,0 +1,29 @@
+$DESTOP : "DESTOP";
+$MEDIUM_DEVICE : "MEDIUM_DEVICE";
+$TABLET_DIVICE : "TABLETDIVICE";
+$MOBILE_DEVICE : "MOBILE_DEVICE";
+$SMAILL_DEVICE : "SMALL_DEVICE";
+
+@mixin Responsive($canvas){
+    @if($canvas == $DESTOP){
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }@else if($canvas == $MEDIUM_DEVICE){
+        @media (min-width: 992px) and (max-width: 1199px) {
+            @content;
+        }
+    }@else if($canvas == $TABLET_DIVICE){
+        @media (min-width: 768px) and (max-width: 991px) {
+            @content;
+        }
+    }@else if($canvas == $MOBILE_DEVICE){
+        @media (min-width: 576px) and (max-width: 767px) {
+            @content;
+        }
+    }@else if($canvas == $SMAILL_DEVICE){
+        @media (max-width: 575px) {
+            @content;
+        }
+    }
+}

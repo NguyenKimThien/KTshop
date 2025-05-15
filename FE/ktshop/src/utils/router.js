@@ -1,4 +1,8 @@
 export const ROUTERS = {
     HOME : "",
-    PROFILE : "profile",
+    SHOP : "shop",
+    PRODUCT : "product",
+    BLOG : "blog",
+    CONTACT : "contact",
 }
+export default ROUTERS;
