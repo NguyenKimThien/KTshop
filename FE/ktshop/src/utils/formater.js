@@ -1,0 +1,10 @@
+import React from 'react';
+
+const formater = (number) => {
+    return new Intl.NumberFormat('vi-VN', {
+        style: 'currency',
+        currency: 'VND',
+    }).format(number);
+};
+
+export default formater;
